@@ -101,3 +101,11 @@ strong {
   margin-right: auto;
   margin-bottom: 50px;
 }
+
+.newsletter a {
+    color: inherit;
+    text-decoration: none;
+}
+.newsletter a:hover {
+    text-decoration: underline;
+}
