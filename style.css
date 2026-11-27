@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'MainFont';
+  src: url('fonts/8bitOperatorPlus-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  font-family: 'MainFont', monospace;
+}
+
+.blurb,
+.image-full {
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* Чтобы картинки не вылезали за пределы контейнера */
+  height: auto;
+}
+
+.blurb a:not(.link-button) {
+  text-decoration: underline;
+  color: #F9FF10;
+}
+
+.section-header {
+  margin-top: 80px;
+}
+
+.container {
+  padding: 2rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+p,
+ul li,
+ol li {
+  color: #ffffff;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+p:last-child {
+  margin-bottom: 80px;
+}
+
+p.text-center {
+  text-align: center;
+}
+
+ul,
+ol {
+  padding-left: 45px;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style: square;
+}
+
+ol {
+  list-style: decimal;
+}
+
+.yellow {
+  color: #F9FF10;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.big-text {
+  font-size: 125%;
+}
+
+.email-header {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}

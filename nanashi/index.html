@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanashi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        .center-image {
+            max-width: 500px;   
+            object-fit: contain;
+
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop autoplay muted>
+        <source src="deflected....ogg" type="audio/ogg">
+    </audio>
+
+    <img src="nanashi.png" class="center-image">
+
+    <script>
+        const audio = document.getElementById('bg-music');
+
+        function playAudio() {
+            audio.muted = false;
+            audio.play().catch(error => {
+
+            });
+            document.removeEventListener('click', playAudio);
+            document.removeEventListener('touchstart', playAudio);
+            document.removeEventListener('keydown', playAudio);
+        }
+
+        document.addEventListener('click', playAudio);
+        document.addEventListener('touchstart', playAudio);
+        document.addEventListener('keydown', playAudio);
+
+        
+        audio.play().catch(() => {
+            
+        });
+    </script>
+</body>
+</html>
