@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
-<title>Deltarune: The Other Puppet Newsletter Fall 2026</title>
+<title>DELTARUNE THE OTHER PUPPET Newsletter fall 2026</title>
 <meta name="description" content="DELTARUNE THE OTHER PUPPET Newsletter fall 2026!">
 <link rel="icon" href="img/site.ico" sizes="32x32">
 <link rel="stylesheet" href="style.css">
@@ -15,19 +15,19 @@
 
 <img src="img/logo.png" class="email-header image-full" alt="Logo">
 
-<p>YO BUDDY, <a href="https://blehteam.github.io/Newsletter/winter/" target="_blank">WINTER</a> IS COMING!</p>
+<p>YO BUDDY, <a href="https://blehteam.github.io/Winter/" target="_blank">WINTER</a> IS COMING!</p>
 
 <p>And here we are, with our first newsletter!</p>
 
-<img src="img/siropic.png" class="image-full" alt="siropic">
+<img src="img/siropic.png" class="image-full" alt="siropic" id="bark">
  
 <img src="img/status_1.png" class="image-full" alt="status 1">
 
-<img src="img/sooze.gif" class="image-full" alt="sooze">
+<img src="img/sooze.gif" class="image-full" alt="sooze" id="laugh">
 
 <p>Right now we're in the polishing stage of the content we made for the video, fixing various bugs and flaws that were left behind the scenes, as well as developing enemy attacks and animations for the team, and possibly, testing and translating the game into different languages soon... possibly.</p>
 
-<p>Ah, and also, we have no clear date when even the beta test of the game will come out, so please be patient :) (But I'm pretty sure it will be sooner than you think!)</p>
+<p>Ah, and also, we have no idea when even the beta test of the game will come out, so just wait :) (but I'm sure it won't take as long as you think)</p>
 
 <img src="img/status_2.png" class="image-full" alt="status 2">
 
@@ -45,13 +45,13 @@
 
 <p>A NEW video will be waiting for you very soon!</p>
 
-<p>Although it's not particularly big as you might expect, you'll definitely find interesting moments in it, and maybe even secrets!</p>
+<p>Although it's not particularly big, as you might expect, you'll definitely find interesting moments in it, and maybe even secrets.</p>
 
 <img src="img/status_4.png" class="image-full" alt="status 4">
 
 <img src="img/Jables.png" class="image-full" alt="Jables">
 
-<p>Only after the game is finished will we start developing new videos with full force, so once again, it's just a matter of patience and waiting.</p>
+<p>Only after the game is finished will we start developing new videos with full force, so once again, it's just a matter of waiting.</p>
 
 <p>But we already have a lot of developed ideas and material that the team has been preparing over the course of development, so actually you won't have to wait that long.</p>
 
@@ -64,5 +64,28 @@
 <p>Good luck to everyone in the new year 2027!</p>
 
 </main>
+<script>
+    const barkID = document.getElementById('bark');
+    const barkSND = new Audio('sounds/bark.mp3');
+    const originalSrc = 'img/siropic.png';
+    const barkingSrc  = 'img/siropic_BARK.png';
+    barkID.addEventListener('click', () => {
+        barkSND.currentTime = 0;
+        barkID.src = barkingSrc;
+        barkSND.play();
+    });
+
+    barkSND.addEventListener('ended', () => {
+        barkID.src = originalSrc;
+    });
+
+    const laughID = document.getElementById('laugh');
+    const laughSND = new Audio('sounds/laugh.mp3');
+
+    laughID.addEventListener('click', () => {
+        laughSND.currentTime = 0;
+        laughSND.play();
+    });
+</script>
 </body>
 </html>
